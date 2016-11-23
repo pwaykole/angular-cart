@@ -20,7 +20,7 @@
                 <h4><b>{{x.productName}}</b></h4>
                 <p>{{x.productDescription | limitTo: 100}}</p>
                 <p>{{x.productPrice}}</p>
-                <p><ngcart-addtocart id="item{{$index + 1}}" name="My Item #{{$index + 1}}" price="{{x.productPrice.replace('$', '')}}" quantity="1" quantity-max="5"><i class="fa fa-cart-plus"></i> Add to Cart</ngcart-addtocart></p>
+                <p><ngcart-addtocart id="item{{$index + 1}}" name="{{x.productName}}" price="{{x.productPrice.replace('$', '')}}" quantity="1" quantity-max="5"><i class="fa fa-cart-plus"></i> Add to Cart</ngcart-addtocart></p>
             </div>
         </div>
     </div>
