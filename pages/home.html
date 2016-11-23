@@ -1,0 +1,28 @@
+<!-- Title -->
+<div class="row">
+    <div class="col-lg-9 col-md-9">
+        <h1>PRODUCTS</h1>
+    </div>
+    <div class="col-lg-1 col-md-1" id="cart">
+        <a ui-sref="cart"><i class="fa fa-3x fa-cart-arrow-down"></i></a>
+    </div>
+    <div class="col-lg-2 col-md-2" id="cart">
+        <a ui-sref="cart"><ngcart-summary></ngcart-summary></a>
+    </div>
+</div>
+<!-- /.row -->
+<!-- Page Features -->
+<div class="row text-center">
+    <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="x in displayProd">
+        <div class="thumbnail">
+            <img src="http://placehold.it/300x300" alt="">
+            <div class="caption">
+                <h4><b>{{x.productName}}</b></h4>
+                <p>{{x.productDescription | limitTo: 100}}</p>
+                <p>{{x.productPrice}}</p>
+                <p><ngcart-addtocart id="item{{$index + 1}}" name="My Item #{{$index + 1}}" price="{{x.productPrice.replace('$', '')}}" quantity="1" quantity-max="5"><i class="fa fa-cart-plus"></i> Add to Cart</ngcart-addtocart></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
